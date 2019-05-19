@@ -6,15 +6,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Playlist {
 
-    @Id
-    private String id;
-    private String nome;
+    public Playlist() {
+        super();
+    }
 
     public Playlist(String id, String nome) {
         super();
         this.id = id;
         this.nome = nome;
     }
+
+    @Id
+    private String id;
+    private String nome;
 
     public String getId() {
         return id;
